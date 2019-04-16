@@ -76,6 +76,11 @@ class Task extends BaseModel
        public function update($id, $data = [])
        {
             unset($data['_csrf']);
+            if(!isset($data['status']))
+            {
+                $data['status'] = 0;
+            }
+
             return parent::update($id, $data);
        }
      

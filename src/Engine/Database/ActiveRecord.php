@@ -181,11 +181,6 @@ class ActiveRecord
         {
               try 
 	            {
-                   if(!isset($data['status']))
-                   {
-                        $data['status'] = 0;
-                   }
-
 	                 $sql = $this->queryBuilder
                            		 ->update($this->table)
                            		 ->set($data)
