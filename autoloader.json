@@ -1,0 +1,6 @@
+{
+	"autoload": {
+		"JanKlod\\": "src/Engine",
+		"app\\": "app/"
+	}
+}
