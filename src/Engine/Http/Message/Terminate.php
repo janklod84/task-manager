@@ -1,5 +1,5 @@
 <?php 
-namespace JanKlod\Http;
+namespace JanKlod\Http\Message;
 	
 
 
