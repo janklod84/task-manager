@@ -70,7 +70,7 @@ class ErrorHandler
                 $message .= "\nThrown in '" . $exception->getFile() . "' on line " . $exception->getLine();
                 error_log($message);
 
-                error('404');
+                notFound();
            }
         }
     }

@@ -77,16 +77,16 @@ class DIC  implements ContainerInterface
        */
        public function get(string $key)
        {
-           if(isset($this->container[$key]))
-           {
-           	   if($this->container[$key] instanceof Entitable)
-           	   {
-           	   	   return $this->container[$key]->get($key);
+             if(isset($this->container[$key]))
+             {
+             	   if($this->container[$key] instanceof Entitable)
+             	   {
+             	   	   return $this->container[$key]->get($key);
 
-           	   }
+             	   }
 
-           	   return $this->call($this->container[$key]);
-           }
+             	   return $this->call($this->container[$key]);
+             }
        }
 
 

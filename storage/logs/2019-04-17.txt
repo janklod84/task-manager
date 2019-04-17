@@ -1,0 +1,12 @@
+[17-Apr-2019 15:22:27 UTC] Uncaught exception: 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'usernames' in 'order clause''
+Stack trace: #0 D:\laragon\www\Framework\src\Engine\Database\Statement.php(65): PDO->query('SELECT * FROM t...')
+#1 D:\laragon\www\Framework\src\Engine\Database\DatabaseManager.php(75): JanKlod\Database\Statement->query('SELECT * FROM t...', Array)
+#2 D:\laragon\www\Framework\src\Engine\Database\ActiveRecord.php(82): JanKlod\Database\DatabaseManager->query('SELECT * FROM t...', Array)
+#3 D:\laragon\www\Framework\app\models\Task.php(54): JanKlod\Database\ActiveRecord->fetch('SELECT * FROM t...')
+#4 D:\laragon\www\Framework\app\controllers\TaskController.php(43): app\models\Task->filter('0, 3', 'usernames')
+#5 [internal function]: app\controllers\TaskController->index('names')
+#6 D:\laragon\www\Framework\src\Engine\Routing\Dispatcher.php(102): call_user_func_array(Array, Array)
+#7 D:\laragon\www\Framework\src\Engine\Foundation\Application.php(74): JanKlod\Routing\Dispatcher->run(Object(JanKlod\Container\DI\DIC))
+#8 D:\laragon\www\Framework\public\index.php(36): JanKlod\Foundation\Application->run()
+#9 {main}
+Thrown in 'D:\laragon\www\Framework\src\Engine\Database\Statement.php' on line 65
