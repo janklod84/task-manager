@@ -29,7 +29,7 @@ return [
     |   Current language of Application
     |------------------------------------------------------------------
    */
-    'language' => 'ru', // en, ru, fr
+    'language' => 'en', // en, ru, fr
 
 
    /*

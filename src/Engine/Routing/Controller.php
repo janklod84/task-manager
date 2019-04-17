@@ -163,10 +163,21 @@ abstract class Controller
          * @param string $code [code language like = ru, en , fr]
          * @return string
         */
-        protected function getLanguage($code = 'ru')
+        protected function getLanguage($code = 'en')
         {
               $code = trim($code, '/');
-              return $this->app->file->call("app/lang/{$code}/translate.php");
+              $currentLanguage = $this->app->config->get('app.language');
+              
+              $codePath = $code ?: $currentLanguage;
+              
+              if(!empty($codePath))
+              {
+                 $path = "app/lang/{$codePath}/translate.php";
+                 if($this->app->file->exists($path))
+                 {
+                     return $this->app->file->call($path);
+                 }
+              }
         }
 
 
