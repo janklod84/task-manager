@@ -15,7 +15,7 @@
 |-------------------------------------------------------
 */
 
-define('DEV', false); 
+define('DEV', true); 
 
 
 /*
@@ -40,9 +40,11 @@ $app->run();
 /*
 |-------------------------------------------------------
 |    Show Microtimer when you are in development
-|    set in config file [app] 'dev' => true
-|    and set language required like: lang => ru | fr | en 
+|    set define('DEV', true);
+|    and inside config file ['/app/config/app.php'] 
+|    set language required like: lang => ru | fr | en 
 |    by default required language is 'en' English
+|    and it'll show how many time generated page!
 |-------------------------------------------------------
 */
 
